@@ -2,13 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const AWS = require('aws-sdk');
 const app = express();
-const port = 4000; // 포트 번호를 4000번으로 설정
+const port = 3333; // 포트 번호를 3333번으로 설정
 
 // AWS 설정
 AWS.config.update({
   region: 'ap-northeast-2', // 서울 리전
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 });
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
